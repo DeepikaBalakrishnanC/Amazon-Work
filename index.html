@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/png;base64,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" type="image/x-icon">
+    <title>Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container container-header">
+            <a href="index.html" class="logo-link">
+            <div class="logo-container border-white">
+                
+    
+                <div class="logo"></div>
+                <span class="dotin">.in</span>
+                    
+            </div>
+        </a>
+            <div class="address-container border-white">
+                <p class="hello">Hello</p>
+                <div class="icon-address">
+                    <i class="fa-solid fa-location-dot icon-location"></i>
+                    <p>Select your address</p>
+                </div>
+            </div>
+            <div class="search-container">
+                <select class="search-select">
+                    <option value="All">All</option>
+                    <!-- <option value="All Categories">All Categories</option> -->
+                    <option value="alexa-skills">Alexa Skills</option>
+                    <option value="amazon-devices">Amazon Devices</option>
+                    <option value="amazon-fasion">Amazon Fasion</option>
+                    <option value="amazon-pharmacy">Amazon Pharmacy</option>
+                    <option value="appliances">Appliances</option>
+                    <option value="apps&games">Apps & Games</option>
+                    <option value="audible-audiobooks">Audible Audiobooks</option>
+                    <option value="baby">Baby</option>
+                    <option value="beauty">Beauty</option>
+                    <option value="books">Books</option>
+                    <option value="car&motorbike">Car & Motorbike</option>
+                    <option value="clothing&accessories">Clothing & Accessories</option>
+                    <option value="collectibles">Collectibles</option>
+                    <option value="computers&accessories">Computers & Accessories</option>
+                    <option value="deals">Deals</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="furniture">Furniture</option>
+                    <option value="garden&outdoors">Garden & Outdoors</option>
+                    <option value="gift-cards">Gift Cards</option>
+                    <option value="grocery&gourmet-foods">Grocery & Gourmet Foods</option>
+                    <option value="health&personal-care">Health & Personal Care</option>
+                    <option value="home&kitchen">Home & Kitchen</option>
+                    <option value="industrial&scientific">Industrial & Scientific</option>
+                    <option value="jewellery">Jewellery</option>
+                    <option value="kindle-store">Kindle Store</option>
+                    <option value="luggage&bags">Luggage & Bags</option>
+                    <option value="luxury-beauty">Luxury Beauty</option>
+                    <option value="movies&tv-shows">Movies & TV Shows</option>
+                    <option value="mp3-music">MP3 Music</option>
+                    <option value="music">Music</option>
+                    <option value="musical-instruments">Musical Instruments</option>
+                    <option value="office-products">Office Products</option>
+                    <option value="pet-supplies">Pet Supplies</option>
+                    <option value="prime-video">Prime Video</option>
+                    <option value="shoes&handbags">Shoes & Handbags</option>
+                    <option value="software">Software</option>
+                    <option value="sports,fitness&outdoors">Sports, Fitness & Outdoors</option>
+                    <option value="tools&home-improvement">Tools & Home Improvement</option>
+                    <option value="toys&games">Toys & Games</option>
+                    <option value="under500">Under 500</option>
+                    <option value="video-games">Video Games</option>
+                    <option value="watches">Watches</option>
+                </select>
+                <input type="text" placeholder="Search Amazon.in" class="search-input">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+            <div class="language-all">
+            <div class="language-container border-white">
+                
+                <div class="language-image">
+                    <img src="https://cdn.pixabay.com/photo/2012/04/10/23/03/india-26828_1280.png">
+                </div>
+                <p>EN</p>
+            </div>
+            <!-- <div class="language-select">
+                <button class="dropbtn">
+                     <i class="fa-solid fa-caret-down icon-dropdown"></i> 
+                  </button>
+                  <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                  </div>
+            </div> -->
+            <div class="dropdown">
+                <button class="dropbtn"><i class="fa-solid fa-caret-down icon-dropdown"></i></button>
+                <div class="dropdown-content">
+                <a href="#"><label>
+                    <input type="radio" name="language" value="en" checked>
+                    English - EN
+                </label>
+                </a>
+                <a href="#"><label>
+                    <input type="radio" name="language" value="hi">
+                    हिन्दी - HI
+                </label>
+                </a>
+                <a href="#"><label>
+                    <input type="radio" name="language" value="ta">
+                    தமிழ் - TA
+                </label>
+                </a>
+                <a href="#"><label>
+                    <input type="radio" name="language" value="te">
+                    తెలుగు - TE
+                </label>
+                </a>
+                <a href="#"><label>
+                    <input type="radio" name="language" value="kn">
+                    ಕನ್ನಡ - KN
+                </label>
+                </a>
+                <a href="#"><label>
+                    <input type="radio" name="language" value="ml">
+                    മലയാളം - ML
+                </label>
+                </a>
+                <a href="#"><label>
+                    <input type="radio" name="language" value="bn">
+                    বাংলা - BN
+                </label>
+                </a>
+                <a href="#"><label>
+                    <input type="radio" name="language" value="gu">
+                    ગુજરાતી - GU
+                </label>
+                </a>
+                <a href="#"><label>
+                    <input type="radio" name="language" value="mr">
+                    मराठी - MR
+                </label>    
+                </a>
+                <a href="#" class="learn-link">Learn More</a>
+                <hr>
+                <label class="drp-label"><img src="https://cdn.pixabay.com/photo/2012/04/10/23/03/india-26828_1280.png" class="drop-img"><p class="drop-para">You are shopping on Amazon.in</p></label>
+                <a href="#" class="learn-link">Change country/region</a>
+                </div>
+              </div>
+            
+
+        </div>
+        <div class="login-all">
+        <div class="login-container border-white">
+            <p>Hello, <span>sign in</span></p>
+            <p class="account">Account & Lists</p>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn"><i class="fa-solid fa-caret-down icon-dropdown"></i></button>
+            <div class="dropdown-content">
+            <a href="#">login 1</a>
+            <a href="#">login 2</a>
+            <a href="#">login 3</a>
+            <a href="#">login 4</a>
+            </div>
+          </div>
+        
+          <div class="return-orders-container border-white">
+            <p>Returns <br><span class="order">& Orders</span></p>
+            </div>
+
+            <div class="cart-container border-white">
+                <i class="fa-solid fa-cart-shopping icon-cart"></i>
+                Cart
+        </div>
+    </header>
+    <nav class="menu-bar">
+        <div class="container container-menu-bar">
+            <div class="menu-bar-container1 border-white">
+                
+                <i class="fa-solid fa-bars icon-menu"></i><p>All</p></label>
+                
+            </div>
+            
+            <div class="menu-bar-container border-white">
+                <p>MX Player</p>
+            </div>
+            <div class="menu-bar-container border-white">
+                <p>Sell</p>
+            </div>
+            <div class="menu-bar-container border-white">
+                <p>Bestsellers</p>
+            </div>
+            <div class="menu-bar-container border-white">
+                <p>Today's Deals</p>
+            </div>
+            <div class="menu-bar-container border-white">
+                <p>Mobiles</p>
+            </div>
+            <div class="menu-bar-container border-white">
+                <p>prime</p>
+            </div>
+            
+            <div class="dropdown">
+                <button class="dropbtn1"><i class="fa-solid fa-caret-down icon-dropdown"></i></button>
+                <div class="dropdown-content">
+                <a href="#"><img src="https://m.media-amazon.com/images/G/31/prime/NavFlyout/TryPrime/2018/Apr/IN-Prime-PIN-TryPrime-MultiBen-Apr18-400x400._CB612889281_.jpg"class="prime-img"></a>
+                </div>
+              
+            </div>
+            <div class="menu-bar-container border-white">
+                <p>Fashion</p>
+            </div>
+            <div class="menu-bar-container border-white">
+                <p>Customer Service</p>
+            </div>
+            <div class="menu-bar-container border-white">
+                <p>New Releases</p>
+            </div>
+            <div class="menu-bar-container border-white">
+                <p>Electronics</p>
+            </div>
+            <div class="menu-bar-container border-white">
+                <p>Amazon Pay</p>
+            </div>
+            <div class="summer-bar-container border-white">
+                <a href="#"><img src="https://m.media-amazon.com/images/G/31/IN-Events/Shankhadip/MayART25/MAY25_PC_SWM_STARTS._CB796635378_.jpg" class="summer-img"></a>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <div class="image-container">
+            <div class="image-list">
+                <div class="image-item">
+                    <img src="https://images-eu.ssl-images-amazon.com/images/G/31/prime/MayART/1/Deals-Revealed-PC-HERO-2x._CB796520283_.jpg">
+                </div>
+                <div class="image-item">
+                    <img src="https://images-eu.ssl-images-amazon.com/images/G/31/INSLGW/MayART25/leadup_men_1_2x._CB796675498_.jpg">
+                </div>
+                <div class="image-item">
+                    <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/CEPC/Jupiter/22/Phase/3/IBD/Stripes/PC_Hero_3000x1200._CB796664258_.jpg">
+                </div>
+                <div class="image-item">
+                    <img src="https://images-eu.ssl-images-amazon.com/images/G/31/BISS_2024/2025/May/Art/GW/LeadUp/28th/Auto/rev/Car-bike-parts--accessories-2-3000x1200._CB796678763_.jpg">
+                </div>
+                <div class="image-item">
+                    <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/WLA/2025/May/MayART/Teaser/Gateway/Unrec/D237946456_WLA_MayART25_GW_Hero_Lead_Up_PC_Asin_3000x1200_releaved_set2._CB796508771_.jpg">
+                </div>
+                <div class="image-item">
+                    <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/dharshini/Lead-Up_PC_Asin_3000x1200-1_LA_2x._CB796748408_.jpg">
+                </div>
+                <div class="image-item">
+                    <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/dharshini/Lead-Up_PC_Asin_3000x1200-1_AC_2x._CB796748408_.jpg">
+                </div>
+                <div class="image-item">
+                    <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img24/Media/MayART25/D238516216_Lead-Up_PC_Asin_3000x1200._CB796499070_.jpg">
+                </div>
+            </div>
+            <div class="image-btn-container">
+                <button class="slider-btn" id="slide-btn-left"><i class="fa-solid fa-angle-left"></i></button>
+                <button class="slider-btn" id="slide-btn-right"><i class="fa-solid fa-angle-right"></i></button>
+            </div>
+
+        </div>
+    </section>
+
+    <main class="main">
+        <div class="card-product-container container">
+            <div class="card-product">
+                <h2>Appliances for your home | Up to 55% off</h2>
+                <div class="card-product-nested-card">
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08RDL6H79._SY116_CB667322346_.jpg">
+                        <p>Air conditioners</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08345R1ZW._SY116_CB667322346_.jpg">
+                        <p>Refrigerators</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B07G5J5FYP._SY116_CB667322346_.jpg">
+                        <p>Microwaves</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/186x116---wm._SY116_CB667322346_.jpg">
+                        <p>Washing machines</p>
+                    </div>
+                    
+                </div>
+                <button class="card-product-btn">See more</button>
+            </div>
+
+            <div class="card-product">
+                <h2>Revamp your home in style</h2>
+                <div class="card-product-nested-card">
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2024/Gateway/BTFGW/PCQC/New/1x/final/186x116_Home_furnishings_2._SY116_CB555624324_.jpg">
+                        <p>Cusion covers, <br>bedsheets & more</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2024/Gateway/BTFGW/PCQC/New/1x/final/186x116_Home_decor_1._SY116_CB555624324_.jpg">
+                        <p>Figurines,vases <br>& more</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2024/Gateway/BTFGW/PCQC/New/1x/final/186x116_Home_storage_1._SY116_CB555624324_.jpg">
+                        <p>Home storage</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2024/Gateway/BTFGW/PCQC/New/1x/final/186x116_Home_lighting_2._SY116_CB555624324_.jpg">
+                        <p>Lighting solutions</p>
+                    </div>
+                    
+                </div>
+                <button class="card-product-btn">See more</button>
+            </div>
+
+            <div class="card-product">
+                <h2>Appliances for your home | Up to 55% off</h2>
+                <div class="card-product-nested-card">
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08RDL6H79._SY116_CB667322346_.jpg">
+                        <p>Air conditioners</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08345R1ZW._SY116_CB667322346_.jpg">
+                        <p>Refrigerators</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B07G5J5FYP._SY116_CB667322346_.jpg">
+                        <p>Microwaves</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/186x116---wm._SY116_CB667322346_.jpg">
+                        <p>Washing machines</p>
+                    </div>
+                    
+                </div>
+                <button class="card-product-btn">See more</button>
+            </div>
+
+            <div class="card-product">
+                <h2>Appliances for your home | Up to 55% off</h2>
+                <div class="card-product-nested-card">
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08RDL6H79._SY116_CB667322346_.jpg">
+                        <p>Air conditioners</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08345R1ZW._SY116_CB667322346_.jpg">
+                        <p>Refrigerators</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B07G5J5FYP._SY116_CB667322346_.jpg">
+                        <p>Microwaves</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/186x116---wm._SY116_CB667322346_.jpg">
+                        <p>Washing machines</p>
+                    </div>
+                    
+                </div>
+                <button class="card-product-btn">See more</button>
+            </div>
+        </div>
+        
+
+        <div class="card-product-container container">
+            <div class="card-product">
+                <h2>Appliances for your home | Up to 55% off</h2>
+                <div class="card-product-nested-card">
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08RDL6H79._SY116_CB667322346_.jpg">
+                        <p>Air conditioners</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08345R1ZW._SY116_CB667322346_.jpg">
+                        <p>Refrigerators</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B07G5J5FYP._SY116_CB667322346_.jpg">
+                        <p>Microwaves</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/186x116---wm._SY116_CB667322346_.jpg">
+                        <p>Washing machines</p>
+                    </div>
+                    
+                </div>
+                <button class="card-product-btn">See more</button>
+            </div>
+
+            <div class="card-product">
+                <h2>Appliances for your home | Up to 55% off</h2>
+                <div class="card-product-nested-card">
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08RDL6H79._SY116_CB667322346_.jpg">
+                        <p>Air conditioners</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08345R1ZW._SY116_CB667322346_.jpg">
+                        <p>Refrigerators</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B07G5J5FYP._SY116_CB667322346_.jpg">
+                        <p>Microwaves</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/186x116---wm._SY116_CB667322346_.jpg">
+                        <p>Washing machines</p>
+                    </div>
+                    
+                </div>
+                <button class="card-product-btn">See more</button>
+            </div>
+
+            <div class="card-product">
+                <h2>Appliances for your home | Up to 55% off</h2>
+                <div class="card-product-nested-card">
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08RDL6H79._SY116_CB667322346_.jpg">
+                        <p>Air conditioners</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08345R1ZW._SY116_CB667322346_.jpg">
+                        <p>Refrigerators</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B07G5J5FYP._SY116_CB667322346_.jpg">
+                        <p>Microwaves</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/186x116---wm._SY116_CB667322346_.jpg">
+                        <p>Washing machines</p>
+                    </div>
+                    
+                </div>
+                <button class="card-product-btn">See more</button>
+            </div>
+
+            <div class="card-product">
+                <h2>Appliances for your home | Up to 55% off</h2>
+                <div class="card-product-nested-card">
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08RDL6H79._SY116_CB667322346_.jpg">
+                        <p>Air conditioners</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08345R1ZW._SY116_CB667322346_.jpg">
+                        <p>Refrigerators</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B07G5J5FYP._SY116_CB667322346_.jpg">
+                        <p>Microwaves</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/186x116---wm._SY116_CB667322346_.jpg">
+                        <p>Washing machines</p>
+                    </div>
+                    
+                </div>
+                <button class="card-product-btn">See more</button>
+            </div>
+        </div>
+
+        <div class="card-product-container container">
+            <div class="card-product">
+                <h2>Appliances for your home | Up to 55% off</h2>
+                <div class="card-product-nested-card">
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08RDL6H79._SY116_CB667322346_.jpg">
+                        <p>Air conditioners</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08345R1ZW._SY116_CB667322346_.jpg">
+                        <p>Refrigerators</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B07G5J5FYP._SY116_CB667322346_.jpg">
+                        <p>Microwaves</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/186x116---wm._SY116_CB667322346_.jpg">
+                        <p>Washing machines</p>
+                    </div>
+                    
+                </div>
+                <button class="card-product-btn">See more</button>
+            </div>
+
+            <div class="card-product">
+                <h2>Appliances for your home | Up to 55% off</h2>
+                <div class="card-product-nested-card">
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08RDL6H79._SY116_CB667322346_.jpg">
+                        <p>Air conditioners</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08345R1ZW._SY116_CB667322346_.jpg">
+                        <p>Refrigerators</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B07G5J5FYP._SY116_CB667322346_.jpg">
+                        <p>Microwaves</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/186x116---wm._SY116_CB667322346_.jpg">
+                        <p>Washing machines</p>
+                    </div>
+                    
+                </div>
+                <button class="card-product-btn">See more</button>
+            </div>
+
+            <div class="card-product">
+                <h2>Appliances for your home | Up to 55% off</h2>
+                <div class="card-product-nested-card">
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08RDL6H79._SY116_CB667322346_.jpg">
+                        <p>Air conditioners</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08345R1ZW._SY116_CB667322346_.jpg">
+                        <p>Refrigerators</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B07G5J5FYP._SY116_CB667322346_.jpg">
+                        <p>Microwaves</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/186x116---wm._SY116_CB667322346_.jpg">
+                        <p>Washing machines</p>
+                    </div>
+                    
+                </div>
+                <button class="card-product-btn">See more</button>
+            </div>
+
+            <div class="card-product">
+                <h2>Appliances for your home | Up to 55% off</h2>
+                <div class="card-product-nested-card">
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08RDL6H79._SY116_CB667322346_.jpg">
+                        <p>Air conditioners</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08345R1ZW._SY116_CB667322346_.jpg">
+                        <p>Refrigerators</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B07G5J5FYP._SY116_CB667322346_.jpg">
+                        <p>Microwaves</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/186x116---wm._SY116_CB667322346_.jpg">
+                        <p>Washing machines</p>
+                    </div>
+                    
+                </div>
+                <button class="card-product-btn">See more</button>
+            </div>
+        </div>
+
+        <div class="card-product-container container">
+            <div class="card-product">
+                <h2>Appliances for your home | Up to 55% off</h2>
+                <div class="card-product-nested-card">
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08RDL6H79._SY116_CB667322346_.jpg">
+                        <p>Air conditioners</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08345R1ZW._SY116_CB667322346_.jpg">
+                        <p>Refrigerators</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B07G5J5FYP._SY116_CB667322346_.jpg">
+                        <p>Microwaves</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/186x116---wm._SY116_CB667322346_.jpg">
+                        <p>Washing machines</p>
+                    </div>
+                    
+                </div>
+                <button class="card-product-btn">See more</button>
+            </div>
+
+            <div class="card-product">
+                <h2>Appliances for your home | Up to 55% off</h2>
+                <div class="card-product-nested-card">
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08RDL6H79._SY116_CB667322346_.jpg">
+                        <p>Air conditioners</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08345R1ZW._SY116_CB667322346_.jpg">
+                        <p>Refrigerators</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B07G5J5FYP._SY116_CB667322346_.jpg">
+                        <p>Microwaves</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/186x116---wm._SY116_CB667322346_.jpg">
+                        <p>Washing machines</p>
+                    </div>
+                    
+                </div>
+                <button class="card-product-btn">See more</button>
+            </div>
+
+            <div class="card-product">
+                <h2>Appliances for your home | Up to 55% off</h2>
+                <div class="card-product-nested-card">
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08RDL6H79._SY116_CB667322346_.jpg">
+                        <p>Air conditioners</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08345R1ZW._SY116_CB667322346_.jpg">
+                        <p>Refrigerators</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B07G5J5FYP._SY116_CB667322346_.jpg">
+                        <p>Microwaves</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/186x116---wm._SY116_CB667322346_.jpg">
+                        <p>Washing machines</p>
+                    </div>
+                    
+                </div>
+                <button class="card-product-btn">See more</button>
+            </div>
+
+            <div class="card-product">
+                <h2>Appliances for your home | Up to 55% off</h2>
+                <div class="card-product-nested-card">
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08RDL6H79._SY116_CB667322346_.jpg">
+                        <p>Air conditioners</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08345R1ZW._SY116_CB667322346_.jpg">
+                        <p>Refrigerators</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B07G5J5FYP._SY116_CB667322346_.jpg">
+                        <p>Microwaves</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/186x116---wm._SY116_CB667322346_.jpg">
+                        <p>Washing machines</p>
+                    </div>
+                    
+                </div>
+                <button class="card-product-btn">See more</button>
+            </div>
+        </div>
+
+        <div class="card-product-container container">
+            <div class="card-product">
+                <h2>Appliances for your home | Up to 55% off</h2>
+                <div class="card-product-nested-card">
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08RDL6H79._SY116_CB667322346_.jpg">
+                        <p>Air conditioners</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08345R1ZW._SY116_CB667322346_.jpg">
+                        <p>Refrigerators</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B07G5J5FYP._SY116_CB667322346_.jpg">
+                        <p>Microwaves</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/186x116---wm._SY116_CB667322346_.jpg">
+                        <p>Washing machines</p>
+                    </div>
+                    
+                </div>
+                <button class="card-product-btn">See more</button>
+            </div>
+
+            <div class="card-product">
+                <h2>Appliances for your home | Up to 55% off</h2>
+                <div class="card-product-nested-card">
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08RDL6H79._SY116_CB667322346_.jpg">
+                        <p>Air conditioners</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08345R1ZW._SY116_CB667322346_.jpg">
+                        <p>Refrigerators</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B07G5J5FYP._SY116_CB667322346_.jpg">
+                        <p>Microwaves</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/186x116---wm._SY116_CB667322346_.jpg">
+                        <p>Washing machines</p>
+                    </div>
+                    
+                </div>
+                <button class="card-product-btn">See more</button>
+            </div>
+
+            <div class="card-product">
+                <h2>Appliances for your home | Up to 55% off</h2>
+                <div class="card-product-nested-card">
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08RDL6H79._SY116_CB667322346_.jpg">
+                        <p>Air conditioners</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08345R1ZW._SY116_CB667322346_.jpg">
+                        <p>Refrigerators</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B07G5J5FYP._SY116_CB667322346_.jpg">
+                        <p>Microwaves</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/186x116---wm._SY116_CB667322346_.jpg">
+                        <p>Washing machines</p>
+                    </div>
+                    
+                </div>
+                <button class="card-product-btn">See more</button>
+            </div>
+
+            <div class="card-product">
+                <h2>Appliances for your home | Up to 55% off</h2>
+                <div class="card-product-nested-card">
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08RDL6H79._SY116_CB667322346_.jpg">
+                        <p>Air conditioners</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08345R1ZW._SY116_CB667322346_.jpg">
+                        <p>Refrigerators</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B07G5J5FYP._SY116_CB667322346_.jpg">
+                        <p>Microwaves</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/186x116---wm._SY116_CB667322346_.jpg">
+                        <p>Washing machines</p>
+                    </div>
+                    
+                </div>
+                <button class="card-product-btn">See more</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="javascript.js"></script>
+</body>
+</html>
